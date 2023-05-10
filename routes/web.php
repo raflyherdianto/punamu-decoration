@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+    return view('dashboard.index', [
+        // dd(auth()->user()->petugas),
+        // 'title' => 'Dashboard',
+    ]);
+})->middleware('auth');
+
+
+Route::post('/login',[AuthController::class,'authenticate']);
+
+Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
+
+Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('/register', function () {
     return view('auth.register');

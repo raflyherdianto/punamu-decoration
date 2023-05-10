@@ -103,10 +103,10 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="https://zuramai.github.io/mazer/docs" class="sidebar-link">
-                    <i class="bi bi-life-preserver"></i>
-                    <span>Logout</span>
-                </a>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button class="btn btn-primary" type="submit">Logout</button>
+                </form>
             </li>
         </ul>
     </div>

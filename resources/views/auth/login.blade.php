@@ -12,36 +12,40 @@
                     Log in with your data that you entered during registration.
                 </p>
 
-                <form action="">
+                <form action="/login" method="POST">
+                    @csrf
                     <div class="form-group position-relative has-icon-left mb-4">
-                        <input type="text" class="form-control form-control-xl" placeholder="Username" />
+                        <input type="text" class="form-control form-control-xl @error('username') is-invalid @enderror"
+                            id="username" name="username" placeholder="Username" value="{{ old('username') }}">
                         <div class="form-control-icon">
                             <i class="bi bi-person"></i>
                         </div>
+                        @error('username')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="form-group position-relative has-icon-left mb-4">
-                        <input type="password" class="form-control form-control-xl" placeholder="Password" />
+                        <input type="password" class="form-control form-control-xl @error('password') is-invalid @enderror"
+                            id="password" name="password" placeholder="Password">
                         <div class="form-control-icon">
                             <i class="bi bi-shield-lock"></i>
                         </div>
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
-                    <div class="form-check form-check-lg d-flex align-items-end">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault" />
-                        <label class="form-check-label text-gray-600" for="flexCheckDefault">
-                            Keep me logged in
-                        </label>
-                    </div>
-                    <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">
+                    <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5" type="submit">
                         Log in
                     </button>
                 </form>
                 <div class="text-center mt-5 text-lg fs-4">
                     <p class="text-gray-600">
                         Don't have an account?
-                        <a href="auth-register.html" class="font-bold">Sign up</a>.
-                    </p>
-                    <p>
-                        <a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.
+                        <a href="/register" class="font-bold">Sign up</a>.
                     </p>
                 </div>
             </div>
