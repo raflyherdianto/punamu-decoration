@@ -36,10 +36,6 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::get('/home', function () {
-    return view('home.index');
-});
-
 Route::get('/contact', function () {
     return view('home.contact');
 });
@@ -51,7 +47,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+        return view('home.index');
 });
 
 Route::get('/services', function () {
