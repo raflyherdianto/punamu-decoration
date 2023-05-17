@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,10 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
+Route::get('/home', function () {
+    return view('home.index');
+});
+
 Route::get('/contact', function () {
     return view('home.contact');
 });
@@ -51,11 +56,7 @@ Route::get('/', function () {
 });
 
 Route::get('/services', function () {
-    return view('dashboard.services.service');
-});
-
-Route::get('/services', function () {
-    return view('dashboard.services.service');
+    return view('dashboard.services.index');
 });
 
 Route::get('/services-create', function () {
@@ -83,7 +84,7 @@ Route::get('/user-edit', function () {
 });
 
 Route::get('/image-services', function () {
-    return view('dashboard.image-services.image-service');
+    return view('dashboard.image-services.index');
 });
 
 Route::get('/image-services-create', function () {
@@ -106,20 +107,10 @@ Route::get('/transactions-edit', function () {
     return view('dashboard.transaction.edit');
 });
 
-Route::get('/categories', function () {
-    return view('dashboard.categories.categories');
-});
-
-Route::get('/categories-create', function () {
-    return view('dashboard.categories.create');
-});
-
-Route::get('/categories-edit', function () {
-    return view('dashboard.categories.edit');
-});
+Route::resource('/dashboard/category', CategoriesController::class)->middleware('auth');
 
 Route::get('/cart', function () {
-    return view('dashboard.cart.cart');
+    return view('dashboard.cart.index');
 });
 
 Route::get('/cart-create', function () {
@@ -131,7 +122,7 @@ Route::get('/cart-edit', function () {
 });
 
 Route::get('/favorite', function () {
-    return view('dashboard.favorite.favorite');
+    return view('dashboard.favorite.index');
 });
 
 Route::get('/favorite-create', function () {
@@ -143,7 +134,7 @@ Route::get('/favorite-edit', function () {
 });
 
 Route::get('/review', function () {
-    return view('dashboard.review.review');
+    return view('dashboard.review.index');
 });
 
 Route::get('/review-create', function () {
