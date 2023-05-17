@@ -39,6 +39,7 @@
     <!-- Need: Apexcharts -->
     <script src="./extensions/apexcharts/apexcharts.min.js"></script>
     <script src="./static/js/pages/dashboard.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
 </html>

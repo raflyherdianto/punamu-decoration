@@ -5,9 +5,9 @@
         <div class="col-lg-5 col-12">
             <div id="auth-left">
                 <div class="auth-logo">
-                    <a href="index.html"><img src="./compiled/svg/logo.svg" alt="Logo" /></a>
+                    <a href=""><h3 style="color: #435ebe">Punamu Decoration</h3></a>
                 </div>
-                <h1 class="auth-title">Sign Up</h1>
+                <h1 class="auth-title">Register</h1>
                 <p class="auth-subtitle mb-5">
                     Input your data to register to our website.
                 </p>
@@ -44,7 +44,7 @@
                 <div class="text-center mt-5 text-lg fs-4">
                     <p class="text-gray-600">
                         Already have an account?
-                        <a href="auth-login.html" class="font-bold">Log in</a>.
+                        <a href="/login" class="font-bold">Log in</a>.
                     </p>
                 </div>
             </div>
