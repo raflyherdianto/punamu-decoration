@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\CategoriesController;
 
 /*
@@ -108,6 +109,8 @@ Route::get('/transactions-edit', function () {
 });
 
 Route::resource('/dashboard/category', CategoriesController::class)->middleware('auth');
+
+Route::resource('/dashboard/service', ServicesController::class)->middleware('auth');
 
 Route::get('/cart', function () {
     return view('dashboard.cart.index');

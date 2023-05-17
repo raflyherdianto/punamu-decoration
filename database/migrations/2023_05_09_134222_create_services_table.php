@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('categories_id');
             $table->string('description');
             $table->integer('price');
-            $table->double('rating');
+            $table->double('rating')->nullable();
             $table->timestamps();
         });
     }
