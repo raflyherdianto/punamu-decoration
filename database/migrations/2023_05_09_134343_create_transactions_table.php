@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('users_id');
+            $table->json('services_id');
+            $table->json('quantity');
+            $table->integer('total_price');
+            $table->string('status');
+            $table->date('date_event');
+            $table->time('time_event');
             $table->timestamps();
         });
     }

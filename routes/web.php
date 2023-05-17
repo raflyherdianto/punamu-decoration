@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,6 +122,8 @@ Route::get('/categories-create', function () {
 Route::get('/categories-edit', function () {
     return view('dashboard.categories.edit');
 });
+
+Route::resource('/dashboard/service', ServicesController::class)->middleware('auth');
 
 Route::get('/cart', function () {
     return view('dashboard.cart.cart');

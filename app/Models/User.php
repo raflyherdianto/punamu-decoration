@@ -12,6 +12,28 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $guarded=['id'];
+
+    public function carts()
+    {
+        return $this->hasMany(Carts::class);
+    }
+
+    public function favorites()
+    {
+        return $this->hasMany(Favorites::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Reviews::class);
+    }
+
+    public function transaction()
+    {
+        return $this->hasMany(Transactions::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
