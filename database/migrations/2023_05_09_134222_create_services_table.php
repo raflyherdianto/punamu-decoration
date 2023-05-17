@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->foreignId('categories_id');
+            $table->string('description');
+            $table->integer('price');
+            $table->double('rating');
             $table->timestamps();
         });
     }
