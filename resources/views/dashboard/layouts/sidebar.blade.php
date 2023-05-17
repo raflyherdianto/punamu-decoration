@@ -57,40 +57,61 @@
 
                 <ul class="submenu">
                     <li class="submenu-item">
-                        <a href="component-accordion.html" class="submenu-link">Pegawai</a>
+                        <a href="/pegawai" class="submenu-link">Pegawai</a>
                     </li>
 
                     <li class="submenu-item">
-                        <a href="component-alert.html" class="submenu-link">Customer</a>
+                        <a href="/customer" class="submenu-link">Customer</a>
                     </li>
                 </ul>
             </li>
 
             <li class="sidebar-item">
-                <a href="form-layout.html" class="sidebar-link">
+                <a href="/services" class="sidebar-link">
                     <i class="bi bi-file-earmark-medical-fill"></i>
                     <span>Services</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a href="form-layout.html" class="sidebar-link">
+                <a href="/image-services" class="sidebar-link">
                     <i class="bi bi-file-earmark-medical-fill"></i>
                     <span>Images Services</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a href="form-layout.html" class="sidebar-link">
+                <a href="/categories" class="sidebar-link">
                     <i class="bi bi-file-earmark-medical-fill"></i>
                     <span>Categories</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a href="form-layout.html" class="sidebar-link">
+                <a href="/cart" class="sidebar-link">
+                    <i class="bi bi-file-earmark-medical-fill"></i>
+                    <span>Cart</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a href="/transactions" class="sidebar-link">
                     <i class="bi bi-file-earmark-medical-fill"></i>
                     <span>Transactions</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a href="/favorite" class="sidebar-link">
+                    <i class="bi bi-file-earmark-medical-fill"></i>
+                    <span>Favorite</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a href="/review" class="sidebar-link">
+                    <i class="bi bi-file-earmark-medical-fill"></i>
+                    <span>Review</span>
                 </a>
             </li>
 

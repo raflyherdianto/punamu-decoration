@@ -53,3 +53,107 @@ Route::get('/about', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/services', function () {
+    return view('dashboard.services.service');
+});
+
+Route::get('/services', function () {
+    return view('dashboard.services.service');
+});
+
+Route::get('/services-create', function () {
+    return view('dashboard.services.create');
+});
+
+Route::get('/services-edit', function () {
+    return view('dashboard.services.edit');
+});
+
+Route::get('/pegawai', function () {
+    return view('dashboard.users.pegawai');
+});
+
+Route::get('/customer', function () {
+    return view('dashboard.users.customer');
+});
+
+Route::get('/user-create', function () {
+    return view('dashboard.users.create');
+});
+
+Route::get('/user-edit', function () {
+    return view('dashboard.users.edit');
+});
+
+Route::get('/image-services', function () {
+    return view('dashboard.image-services.image-service');
+});
+
+Route::get('/image-services-create', function () {
+    return view('dashboard.image-services.create');
+});
+
+Route::get('/image-services-edit', function () {
+    return view('dashboard.image-services.edit');
+});
+
+Route::get('/transactions', function () {
+    return view('dashboard.transaction.transaction');
+});
+
+Route::get('/transactions-create', function () {
+    return view('dashboard.transaction.create');
+});
+
+Route::get('/transactions-edit', function () {
+    return view('dashboard.transaction.edit');
+});
+
+Route::get('/categories', function () {
+    return view('dashboard.categories.categories');
+});
+
+Route::get('/categories-create', function () {
+    return view('dashboard.categories.create');
+});
+
+Route::get('/categories-edit', function () {
+    return view('dashboard.categories.edit');
+});
+
+Route::get('/cart', function () {
+    return view('dashboard.cart.cart');
+});
+
+Route::get('/cart-create', function () {
+    return view('dashboard.cart.create');
+});
+
+Route::get('/cart-edit', function () {
+    return view('dashboard.cart.edit');
+});
+
+Route::get('/favorite', function () {
+    return view('dashboard.favorite.favorite');
+});
+
+Route::get('/favorite-create', function () {
+    return view('dashboard.favorite.create');
+});
+
+Route::get('/favorite-edit', function () {
+    return view('dashboard.favorite.edit');
+});
+
+Route::get('/review', function () {
+    return view('dashboard.review.review');
+});
+
+Route::get('/review-create', function () {
+    return view('dashboard.review.create');
+});
+
+Route::get('/review-edit', function () {
+    return view('dashboard.review.edit');
+});
