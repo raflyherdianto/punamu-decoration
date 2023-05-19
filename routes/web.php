@@ -50,11 +50,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/services', function () {
-    return view('dashboard.services.service');
-});
-
-Route::get('/services', function () {
-    return view('dashboard.services.service');
+    return view('dashboard.services.index');
 });
 
 Route::get('/services-create', function () {
