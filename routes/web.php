@@ -37,7 +37,7 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home.index');
 });
 
@@ -49,10 +49,6 @@ Route::get('/product', function () {
 });
 Route::get('/about', function () {
     return view('home.about');
-});
-
-Route::get('/', function () {
-    return view('welcome');
 });
 
 Route::get('/services', function () {

@@ -39,25 +39,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1.000.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.000.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.7</h6>
+                                    </div>
+                                    <p class="review">68 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -69,25 +57,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 900.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 900.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                                    </div>
+                                    <p class="review">84 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -99,25 +75,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1,100,000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.100.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
+                                    </div>
+                                    <p class="review">47 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -129,25 +93,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1.200.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.200.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                                    </div>
+                                    <p class="review">73 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -159,25 +111,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 2.000.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 2.000.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
+                                    </div>
+                                    <p class="review">92 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -189,25 +129,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1.500.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.500.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                                    </div>
+                                    <p class="review">86 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -219,25 +147,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1.200.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.200.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.7</h6>
+                                    </div>
+                                    <p class="review">49 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -249,25 +165,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1.100.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.100.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.7</h6>
+                                    </div>
+                                    <p class="review">69 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,25 +183,13 @@
                                 </a>
 
                                 <div class="property-content">
-                                    <div class="price mb-2"><span>Rp. 1.600.000</span></div>
+                                    <div class="rating">
+                                        <div class="price"><span>Rp. 1.600.000</span></div>
+                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                                    </div>
+                                    <p class="review">74 Reviews</p>
                                     <div>
-                                        <!-- <span class="d-block mb-2 text-black-50"
-                                        >5232 California Fake, Ave. 21BC</span
-                                      >
-                                      <span class="city d-block mb-3">California, USA</span>
-
-                                      <div class="specs d-flex mb-4">
-                                        <span class="d-block d-flex align-items-center me-3">
-                                          <span class="icon-bed me-2"></span>
-                                          <span class="caption">2 beds</span>
-                                        </span>
-                                        <span class="d-block d-flex align-items-center">
-                                          <span class="icon-bath me-2"></span>
-                                          <span class="caption">2 baths</span>
-                                        </span>
-                                      </div> -->
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -326,13 +218,17 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 1.000.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 1.000.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                            </div>
+                            <p class="review">63 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet</span>
-                                <span class="city d-block mb-3">Decor 1</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 1</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -345,13 +241,17 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 1.000.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 1.000.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.6</h6>
+                            </div>
+                            <p class="review">92 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet</span>
-                                <span class="city d-block mb-3">Decor 2</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 2</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -364,13 +264,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 1.100.000</span></div>
+                            <div class="rating">
+                                <div class="price">
+                                    <span>Rp. 1.100.000</span>
+                                </div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.5</h6>
+                            </div>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet</span>
-                                <span class="city d-block mb-3">Decor 3</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 3</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -384,14 +289,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 1.300.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 1.300.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.7</h6>
+                            </div>
+                            <p class="review">74 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet</span>
-                                <span class="city d-block mb-3">Decor 4</span>
+                                <span class="city d-block mb-2">Decor 4</span>
 
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -405,14 +314,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 1.800.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 1.800.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                            </div>
+                            <p class="review">46 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet, Gapura
                                     Masuk, Pundi Amplop</span>
-                                <span class="city d-block mb-3">Decor 5</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 5</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -426,14 +339,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 2.300.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 2.300.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                            </div>
+                            <p class="review">29 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet, Gapura
                                     Masuk, Pundi Amplop</span>
-                                <span class="city d-block mb-3">Decor 6</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 6</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -447,14 +364,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 2.500.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 2.500.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
+                            </div>
+                            <p class="review">39 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet, Gapura
                                     Masuk, Pundi Amplop</span>
-                                <span class="city d-block mb-3">Decor 7</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 7</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -467,14 +388,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 2.200.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 2.200.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
+                            </div>
+                            <p class="review">53 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet, Gapura
                                     Masuk, Pundi Amplop</span>
-                                <span class="city d-block mb-3">Decor 8</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 8</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -487,14 +412,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 2.350.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 2.350.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
+                            </div>
+                            <p class="review">78 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet, Gapura
                                     Masuk, Pundi Amplop</span>
-                                <span class="city d-block mb-3">Decor 9</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 9</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -507,14 +436,18 @@
                         </a>
 
                         <div class="property-content">
-                            <div class="price mb-2"><span>Rp. 2.100.000</span></div>
+                            <div class="rating">
+                                <div class="price"><span>Rp. 2.100.000</span></div>
+                                <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
+                            </div>
+                            <p class="review">46 Reviews</p>
                             <div>
                                 <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
                                     Karpet</span>
                                 <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet, Gapura
                                     Masuk, Pundi Amplop</span>
-                                <span class="city d-block mb-3">Decor 10</span>
-                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                <span class="city d-block mb-2">Decor 10</span>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
