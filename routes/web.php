@@ -17,8 +17,6 @@ use App\Http\Controllers\CategoriesController;
 
 Route::get('/dashboard', function () {
     return view('dashboard.index', [
-        // dd(auth()->user()->petugas),
-        // 'title' => 'Dashboard',
     ]);
 })->middleware('auth');
 
