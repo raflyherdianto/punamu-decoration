@@ -16,7 +16,7 @@
           <ul
             class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
           >
-            <li class="active"><a href="/home">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/product">Decoration</a></li>
             <li><a href="/contact">Contact Us</a></li>
