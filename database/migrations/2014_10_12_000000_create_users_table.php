@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('bank_account')->nullable();
             $table->string('password');
             $table->string('photo')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->boolean('verified')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

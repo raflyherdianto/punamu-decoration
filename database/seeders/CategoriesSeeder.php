@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CategoriesSeeder extends Seeder
 {
@@ -12,6 +13,20 @@ class CategoriesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $categories = [
+            [
+                'name' => 'Decoration',
+                'category_code' => 'DECOR',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'name' => 'Make Up',
+                'category_code' => 'MAKEUP',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+        ];
+        Category::insert($categories);
     }
 }

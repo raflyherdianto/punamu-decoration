@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -22,9 +23,12 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/dashboard')->with('success', 'Berhasil Login!');
+            Alert::success('Login Success', 'Selamat Datang!');
+            return redirect('/dashboard');
+
         }
-        return back()->with('loginError', 'Username atau Password Salah!');
+        Alert::error('Login Gagal', 'Username atau Password Salah!');
+        return back();
     }
     public function logout(Request $request)
     {

@@ -15,25 +15,23 @@
                 <form action="/login" method="POST">
                     @csrf
                     <div class="form-group position-relative has-icon-left mb-4">
-                        <input type="text" class="form-control form-control-xl @error('username') is-invalid @enderror"
-                            id="username" name="username" placeholder="Username" value="{{ old('username') }}">
+                        <input type="text" class="form-control form-control-xl @error('username') is-invalid @enderror" id="username" name="username" placeholder="Username" value="{{ old('username') }}">
                         <div class="form-control-icon">
                             <i class="bi bi-person"></i>
                         </div>
                         @error('username')
-                            <div class="invalid-feedback">
+                            <div class="text-danger">
                                 {{ $message }}
                             </div>
                         @enderror
                     </div>
                     <div class="form-group position-relative has-icon-left mb-4">
-                        <input type="password" class="form-control form-control-xl @error('password') is-invalid @enderror"
-                            id="password" name="password" placeholder="Password">
+                        <input type="password" class="form-control form-control-xl @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password">
                         <div class="form-control-icon">
                             <i class="bi bi-shield-lock"></i>
                         </div>
                         @error('password')
-                            <div class="invalid-feedback">
+                            <div class="text-danger">
                                 {{ $message }}
                             </div>
                         @enderror

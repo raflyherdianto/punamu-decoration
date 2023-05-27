@@ -17,7 +17,7 @@ return new class extends Migration
             $table->json('service_id');
             $table->json('quantity');
             $table->integer('total_price');
-            $table->string('status');
+            $table->enum('status', ['PENDING', 'SUCCESS', 'CANCELED', 'ON PROGRESS']);
             $table->date('date_event');
             $table->time('time_event');
             $table->timestamps();

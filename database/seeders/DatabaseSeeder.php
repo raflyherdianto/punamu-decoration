@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
             IndoRegionDistrictSeeder::class,
             IndoRegionVillageSeeder::class,
             UserSeeder::class,
+            CategoriesSeeder::class,
+            ServicesSeeder::class,
         ]);
     }
 }

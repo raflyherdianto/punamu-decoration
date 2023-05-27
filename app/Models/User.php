@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $guarded=['id'];
+    protected $table = 'users';
 
     public function carts()
     {
@@ -57,7 +57,14 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username',
         'password',
+        'province_id',
+        'regency_id',
+        'district_id',
+        'address',
+        'zip_code',
+        'phone'
     ];
 
     /**

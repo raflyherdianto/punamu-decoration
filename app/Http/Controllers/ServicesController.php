@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Services;
-use App\Models\Categories;
+use App\Models\Service;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Requests\StoreServicesRequest;
 use App\Http\Requests\UpdateServicesRequest;
 
@@ -16,7 +17,8 @@ class ServicesController extends Controller
     public function index()
     {
         return view('dashboard.services.index', [
-            'services' => Services::all(),
+            'title' => 'Services',
+            'services' => Service::all(),
         ]);
     }
 
@@ -26,7 +28,8 @@ class ServicesController extends Controller
     public function create()
     {
         return view('dashboard.services.create', [
-            'categories' => Categories::all(),
+            'title' => 'Create Services',
+            'categories' => Category::all(),
         ]);
     }
 
@@ -37,18 +40,20 @@ class ServicesController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required|max:255',
-            'categories_id' => 'required|max:255',
+            'category_id' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|max:255',
+            'rating' => 'max:5',
         ]);
-        Services::create($validateData);
-        return redirect('/dashboard/service')->with('success', 'Data berhasil ditambahkan');
+        Service::create($validateData);
+        Alert::success('Success', 'Data berhasil ditambahkan');
+        return redirect('/dashboard/service');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Services $services)
+    public function show(Service $services)
     {
         //
     }
@@ -59,8 +64,9 @@ class ServicesController extends Controller
     public function edit($id)
     {
         return view('dashboard.services.edit', [
-            'services' => Services::findOrFail($id),
-            'categories' => Categories::all(),
+            'title' => 'Edit Services',
+            'service' => Service::findOrFail($id),
+            'categories' => Category::all(),
         ]);
     }
 
@@ -69,15 +75,17 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $services=Services::find($id);
+        $services = Service::find($id);
         $validateData = $request->validate([
             'name' => 'required|max:255',
-            'categories_id' => 'required|max:255',
+            'category_id' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|max:255',
+            'rating' => 'max:5',
         ]);
-        Services::where('id', $services->id)->update($validateData);
-        return redirect('/dashboard/service')->with('success', 'Data berhasil diubah');
+        Service::where('id', $services->id)->update($validateData);
+        Alert::success('Success', 'Data berhasil diubah');
+        return redirect('/dashboard/service');
     }
 
     /**
@@ -85,7 +93,8 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-        Services::find($id)->delete();
-        return redirect('/dashboard/service')->with('success', 'Data berhasil dihapus');
+        Service::find($id)->delete();
+        Alert::success('Success', 'Data berhasil dihapus');
+        return redirect('/dashboard/service');
     }
 }
