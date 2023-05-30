@@ -43,7 +43,7 @@ class ServicesController extends Controller
             'category_id' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|max:255',
-            'rating' => 'max:5',
+            'rating' => 'max:2',
         ]);
         Service::create($validateData);
         Alert::success('Success', 'Data berhasil ditambahkan');

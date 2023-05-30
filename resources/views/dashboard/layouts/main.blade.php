@@ -61,7 +61,13 @@
                 imgPreview.src = oFREvent.target.result;
             }
         }
+        $(document).ready(function () {
+        $('#table1').dataTable({
+        scrollX: true,
+    });
+});
     </script>
+
 </body>
 
 </html>

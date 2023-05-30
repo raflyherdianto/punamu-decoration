@@ -50,84 +50,77 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item has-sub">
-                    <a href="#" class="sidebar-link">
-                        <i class="bi bi-stack"></i>
-                        <span>Users</span>
+                <li class="sidebar-item {{ Request::is('dashboard/customer') ? 'active' : '' }} {{ Request::is('dashboard/customer/create') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/customer') }}" class="sidebar-link">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Customers</span>
                     </a>
-
-                    <ul class="submenu">
-                        <li class="submenu-item">
-                            <a href="/pegawai" class="submenu-link">Pegawai</a>
-                        </li>
-
-                        <li class="submenu-item">
-                            <a href="/customer" class="submenu-link">Customer</a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="sidebar-item {{ Request::is('dashboard/service') ? 'active' : '' }} {{ Request::is('dashboard/service/create') ? 'active' : '' }}">
                     <a href="{{ url('dashboard/service') }}" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
+                        <i class="bi bi-stack"></i>
                         <span>Services</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ Request::is('dashboard/image-service') ? 'active' : '' }} {{ Request::is('dashboard/image-service/create') ? 'active' : '' }}">
                     <a href="{{ url('dashboard/image-service') }}" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
+                        <i class="bi bi-file-image"></i>
                         <span>Images Services</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ Request::is('dashboard/category') ? 'active' : '' }} {{ Request::is('dashboard/category/create') ? 'active' : '' }}">
                     <a href="{{ url('dashboard/category') }}" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
+                        <i class="bi bi-grid-1x2-fill"></i>
                         <span>Categories</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a href="/cart" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Cart</span>
+                        <i class="bi bi-cart"></i>
+                        <span>Carts</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a href="/transactions" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
+                        <i class="bi bi-clipboard2-data-fill"></i>
                         <span>Transactions</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a href="/favorite" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Favorite</span>
+                        <i class="bi bi-heart-fill"></i>
+                        <span>Favorites</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a href="/review" class="sidebar-link">
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Review</span>
+                        <i class="bi bi-chat-left-text-fill"></i>
+                        <span>Reviews</span>
                     </a>
                 </li>
 
                 <li class="sidebar-title">Profile</li>
 
-                <li class="sidebar-item">
-                    <a href="https://zuramai.github.io/mazer/docs" class="sidebar-link">
+                <li class="sidebar-item {{ Request::is('dashboard/profile') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/profile') }}" class="sidebar-link">
                         <i class="bi bi-life-preserver"></i>
-                        <span>Settings</span>
+                        <span>Edit Profile</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <form action="{{ url('/logout') }}" method="POST">
                         @csrf
-                        <button class="btn btn-primary" type="submit">Logout</button>
+                        <button class="btn btn-primary" type="submit">Logout
+                            <i class="bi bi-box-arrow-right"></i>
+                        </button>
+
                     </form>
                 </li>
             </ul>

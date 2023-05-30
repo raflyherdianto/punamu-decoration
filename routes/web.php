@@ -4,6 +4,8 @@ use App\Models\Service;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\CategoriesController;
@@ -79,6 +81,10 @@ Route::get('/review-create', function () {
 Route::get('/review-edit', function () {
     return view('dashboard.review.edit');
 });
+
+Route::resource('/dashboard/profile', UserController::class)->middleware('auth');
+
+Route::resource('/dashboard/customer', CustomerController::class)->middleware('auth');
 
 Route::resource('/dashboard/image-service', ImageServicesController::class)->middleware('auth');
 

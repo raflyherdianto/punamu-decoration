@@ -11,24 +11,26 @@
     <div class="container">
       <div class="menu-bg-wrap">
         <div class="site-navigation">
-          <a href="/home" class="logo m-0 float-start">PunamuDecoration</a>
+          <a href="{{ url('/') }}" class="logo m-0 float-start">PunamuDecoration</a>
 
           <ul
             class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
           >
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/product">Decoration</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/login" class="login">Login</a></li>
+            <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
+            <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ url('about') }}">About</a></li>
+            <li class="{{ Request::is('product') ? 'active' : '' }}"><a href="{{ url('product') }}">Our Services</a></li>
+            <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}">Contact Us</a></li>
+            @if (Auth::check())
+                <li><a href="{{ url('dashboard/cart') }}">Cart</a></li>
+                <li><a href="{{ url('dashboard/transaction') }}">Transactions</a></li>
+                @else
+                <li><a href="{{ url('login') }}">Login</a></li>
+            @endif
           </ul>
 
-          <a
-            href="#"
-            class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+          <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
             data-toggle="collapse"
-            data-target="#main-navbar"
-          >
+            data-target="#main-navbar">
             <span></span>
           </a>
         </div>
