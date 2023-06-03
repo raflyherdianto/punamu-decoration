@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('zip_code');
             $table->string('phone');
             $table->string('bank_name')->nullable();
-            $table->string('bank_account')->nullable();
+            $table->string('bank_account')->nullable()->unique();
             $table->string('password');
             $table->string('photo')->nullable();
             $table->boolean('verified')->nullable();

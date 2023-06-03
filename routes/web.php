@@ -4,11 +4,15 @@ use App\Models\Service;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DateController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartsController;
+use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\ImageServicesController;
 
 /*
@@ -22,65 +26,15 @@ use App\Http\Controllers\ImageServicesController;
 |
 */
 
-Route::get('/pegawai', function () {
-    return view('dashboard.users.pegawai');
-});
+Route::get('/dashboard/date', [DateController::class, 'index'])->middleware('auth');
 
-Route::get('/customer', function () {
-    return view('dashboard.users.customer');
-});
+Route::resource('/dashboard/transaction', TransactionsController::class)->middleware('auth');
 
-Route::get('/user-edit', function () {
-    return view('dashboard.users.edit');
-});
+Route::resource('/dashboard/favorite', FavoritesController::class)->middleware('auth');
 
-Route::get('/transactions', function () {
-    return view('dashboard.transaction.transaction');
-});
+Route::resource('/dashboard/review', ReviewsController::class)->middleware('auth');
 
-Route::get('/transactions-create', function () {
-    return view('dashboard.transaction.create');
-});
-
-Route::get('/transactions-edit', function () {
-    return view('dashboard.transaction.edit');
-});
-
-Route::get('/cart', function () {
-    return view('dashboard.cart.cart');
-});
-
-Route::get('/cart-create', function () {
-    return view('dashboard.cart.create');
-});
-
-Route::get('/cart-edit', function () {
-    return view('dashboard.cart.edit');
-});
-
-Route::get('/favorite', function () {
-    return view('dashboard.favorite.favorite');
-});
-
-Route::get('/favorite-create', function () {
-    return view('dashboard.favorite.create');
-});
-
-Route::get('/favorite-edit', function () {
-    return view('dashboard.favorite.edit');
-});
-
-Route::get('/review', function () {
-    return view('dashboard.review.review');
-});
-
-Route::get('/review-create', function () {
-    return view('dashboard.review.create');
-});
-
-Route::get('/review-edit', function () {
-    return view('dashboard.review.edit');
-});
+Route::resource('/dashboard/cart', CartsController::class)->middleware('auth');
 
 Route::resource('/dashboard/profile', UserController::class)->middleware('auth');
 

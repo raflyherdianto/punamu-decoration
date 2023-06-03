@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('transaction_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->string('code')->unique();
-            $table->integer('total_price');
-            $table->enum('status', ['PENDING', 'SUCCESS', 'CANCELED', 'ON PROGRESS']);
-            $table->date('date_event');
-            $table->time('time_event');
+            $table->foreignId('transaction_id');
+            $table->foreignId('service_id');
+            $table->integer('quantity');
+            $table->integer('subtotal');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('transaction_details');
     }
 };

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('/compiled/css/app.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('/compiled/css/app-dark.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('/extensions/choices.js/public/assets/styles/choices.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,6 +42,9 @@
     <script src="{{ asset('/static/js/pages/dashboard.js') }}"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://unpkg.com/flatpickr"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script>
         function previewImage() {
             const photo = document.querySelector('#photo');
@@ -50,7 +55,7 @@
             oFReader.onload = function(oFREvent) {
                 imgPreview.src = oFREvent.target.result;
             }
-        }
+        };
         function previewImages() {
             const image = document.querySelector('#image');
             const imgPreview = document.querySelector('.img-preview');
@@ -60,12 +65,21 @@
             oFReader.onload = function(oFREvent) {
                 imgPreview.src = oFREvent.target.result;
             }
-        }
+        };
         $(document).ready(function () {
-        $('#table1').dataTable({
-        scrollX: true,
-    });
-});
+            $('#table1').dataTable({
+                scrollX: true,
+            });
+        });
+        flatpickr("input[type=datetime-local]", {
+            minDate: 'today',
+        });
+        flatpickr("input[type=time]", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+        });
     </script>
 
 </body>

@@ -78,29 +78,29 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a href="/cart" class="sidebar-link">
+                <li class="sidebar-item {{ Request::is('dashboard/cart') ? 'active' : '' }} {{ Request::is('dashboard/cart/create') ? 'active' : '' }} {{ Request::is('dashboard/date') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/cart') }}" class="sidebar-link">
                         <i class="bi bi-cart"></i>
                         <span>Carts</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a href="/transactions" class="sidebar-link">
+                <li class="sidebar-item {{ Request::is('dashboard/transaction') ? 'active' : '' }} {{ Request::is('dashboard/transaction/create') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/transaction') }}" class="sidebar-link">
                         <i class="bi bi-clipboard2-data-fill"></i>
                         <span>Transactions</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a href="/favorite" class="sidebar-link">
+                <li class="sidebar-item {{ Request::is('dashboard/favorite') ? 'active' : '' }} {{ Request::is('dashboard/favorite/create') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/favorite') }}" class="sidebar-link">
                         <i class="bi bi-heart-fill"></i>
                         <span>Favorites</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a href="/review" class="sidebar-link">
+                <li class="sidebar-item {{ Request::is('dashboard/review') ? 'active' : '' }} {{ Request::is('dashboard/review/create') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/review') }}" class="sidebar-link">
                         <i class="bi bi-chat-left-text-fill"></i>
                         <span>Reviews</span>
                     </a>
