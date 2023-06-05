@@ -19,9 +19,9 @@ class UserController extends Controller
     {
         return view('dashboard.users.profile', [
             'title' => 'Profile',
-            'provinces' => Province::all(),
-            'regencies' => Regency::all(),
-            'districts' => District::all(),
+            'provinces' => Province::where('id', 35)->get(),
+            'regencies' => Regency::where('province_id', 35)->get(),
+            'districts' => Regency::join('districts', 'regencies.id', '=', 'districts.regency_id')->where('province_id', 35)->get(),
             'user' => auth()->user(),
         ]);
     }

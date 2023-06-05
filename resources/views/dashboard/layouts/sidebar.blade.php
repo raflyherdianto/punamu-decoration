@@ -39,6 +39,7 @@
                 </div>
             </div>
         </div>
+        @can('admin')
         <div class="sidebar-menu">
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
@@ -75,6 +76,45 @@
                     <a href="{{ url('dashboard/category') }}" class="sidebar-link">
                         <i class="bi bi-grid-1x2-fill"></i>
                         <span>Categories</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item {{ Request::is('dashboard/transaction') ? 'active' : '' }} {{ Request::is('dashboard/transaction/create') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/transaction') }}" class="sidebar-link">
+                        <i class="bi bi-clipboard2-data-fill"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title">Profile</li>
+
+                <li class="sidebar-item {{ Request::is('dashboard/profile') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard/profile') }}" class="sidebar-link">
+                        <i class="bi bi-life-preserver"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <form action="{{ url('/logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-primary" type="submit">Logout
+                            <i class="bi bi-box-arrow-right"></i>
+                        </button>
+
+                    </form>
+                </li>
+            </ul>
+        </div>
+        @endcan
+        @can('customer')
+        <div class="sidebar-menu">
+            <ul class="menu">
+                <li class="sidebar-title">Menu</li>
+
+                <li class="sidebar-item {{ Request::is('dashboard') ? 'active' : '' }}">
+                    <a href="{{ url('dashboard') }}" class="sidebar-link">
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
 
@@ -120,10 +160,10 @@
                         <button class="btn btn-primary" type="submit">Logout
                             <i class="bi bi-box-arrow-right"></i>
                         </button>
-
                     </form>
                 </li>
             </ul>
         </div>
+        @endcan
     </div>
 </div>

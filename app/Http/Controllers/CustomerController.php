@@ -18,6 +18,9 @@ class CustomerController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.users.index', [
             'title' => 'Customers',
             'customers' => User::where('role', 'customer')->latest()->get(),
@@ -29,11 +32,14 @@ class CustomerController extends Controller
      */
     public function create()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.users.create', [
             'title' => 'Create Customer',
-            'provinces' => Province::all(),
-            'regencies' => Regency::all(),
-            'districts' => District::all(),
+            'provinces' => Province::where('id', 35)->get(),
+            'regencies' => Regency::where('province_id', 35)->get(),
+            'districts' => Regency::join('districts', 'regencies.id', '=', 'districts.regency_id')->where('province_id', 35)->get(),
         ]);
     }
 
@@ -89,11 +95,14 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.users.edit', [
             'title' => 'Edit Customer',
-            'provinces' => Province::all(),
-            'regencies' => Regency::all(),
-            'districts' => District::all(),
+            'provinces' => Province::where('id', 35)->get(),
+            'regencies' => Regency::where('province_id', 35)->get(),
+            'districts' => Regency::join('districts', 'regencies.id', '=', 'districts.regency_id')->where('province_id', 35)->get(),
             'user' => User::findOrFail($id),
         ]);
     }

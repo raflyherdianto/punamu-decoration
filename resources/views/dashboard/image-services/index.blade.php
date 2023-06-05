@@ -39,8 +39,7 @@
                         <tbody>
                             @foreach ($image_services as $image_service)
                             <tr>
-                                <td>
-                                    {{ $image_service->service->name }}</td>
+                                <td>{{ $image_service->service->name }}</td>
                                 <td>
                                     <a href="{{ asset('storage/' . $image_service->image) }}" data-toggle="lightbox">
                                         <img width="50" src="{{ asset('storage/' . $image_service->image) }}">

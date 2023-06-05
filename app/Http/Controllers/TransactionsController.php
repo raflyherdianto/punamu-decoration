@@ -17,7 +17,12 @@ class TransactionsController extends Controller
      */
     public function index()
     {
-
+        if(auth()->user()->role == 'admin'){
+            return view('dashboard.transaction.index', [
+                'title' => 'Transaction',
+                'transactions' => Transaction::latest()->get(),
+            ]);
+        }
         return view('dashboard.transaction.index', [
             'title' => 'Transaction',
             'transactions' => Transaction::where('user_id', auth()->user()->id)->latest()->get(),
@@ -30,7 +35,7 @@ class TransactionsController extends Controller
     public function create()
     {
 
-}
+    }
     /**
      * Store a newly created resource in storage.
      */
@@ -60,16 +65,21 @@ class TransactionsController extends Controller
         foreach ($carts as $cart){
             $cart->delete();
         };
-        Alert::success('Success', 'Data berhasil ditambahkan');
-        return redirect('/dashboard/transaction');
+        Alert::success('Success', 'Silahkan lakukan pembayaran');
+        return redirect('/dashboard/payment');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Transaction $transactions)
+    public function show($id)
     {
-        //
+        $transactionDetails = TransactionDetail::where('transaction_id', $id)->get();
+        return view('dashboard.transaction.show', [
+            'title' => 'Transaction Detail',
+            'transaction' => Transaction::find($id),
+            'transactionDetails' => $transactionDetails,
+        ]);
     }
 
     /**
@@ -77,7 +87,10 @@ class TransactionsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard.transaction.edit', [
+            'title' => 'Edit Transaction',
+            'transaction' => Transaction::find($id),
+        ]);
     }
 
     /**
@@ -85,14 +98,26 @@ class TransactionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $transaction = Transaction::find($id);
+        $validateData = $request->validate([
+            'status' => 'required',
+        ]);
+        $transaction->status = $validateData['status'];
+        $transaction->save();
+        Alert::success('Success', 'Data berhasil diubah');
+        return redirect('/dashboard/transaction');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Transaction $transactions)
+    public function destroy($id)
     {
-        //
+        Transaction::find($id)->delete();
+        foreach(TransactionDetail::where('transaction_id', $id)->get() as $detail){
+            $detail->delete();
+        };
+        Alert::success('Success', 'Data berhasil dihapus');
+        return redirect('/dashboard/transaction');
     }
 }

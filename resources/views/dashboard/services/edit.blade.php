@@ -95,18 +95,55 @@
                                                 @enderror
                                                     </div>
                                             </div>
-                                            <div class="col-md-6 col-12">
+                                            {{-- <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="first-name-column">Rating</label>
+                                                    <i class="bi bi-star-fill"></i>
                                                     <input type="number" class="form-control @error('rating') is-invalid @enderror"
                                                     id="rating" name="rating" value="{{ old('rating', $service->rating) }}">
+                                                    <select
+                                                        class="form-select @error('rating') is-invalid @enderror"
+                                                        id="rating" name="rating">
+                                                        <option selected>Bintang...</option>
+                                                        @if (old('rating', $service->rating) == 5)
+                                                            <option value=5 selected>5</option>
+                                                            <option value=4>4</option>
+                                                            <option value=3>3</option>
+                                                            <option value=2>2</option>
+                                                            <option value=1>1</option>
+                                                        @elseif (old('rating', $service->rating) == 4)
+                                                            <option value=5>5</option>
+                                                            <option value=4 selected>4</option>
+                                                            <option value=3>3</option>
+                                                            <option value=2>2</option>
+                                                            <option value=1>1</option>
+                                                        @elseif (old('rating', $service->rating) == 3)
+                                                            <option value=5>5</option>
+                                                            <option value=4>4</option>
+                                                            <option value=3 selected>3</option>
+                                                            <option value=2>2</option>
+                                                            <option value=1>1</option>
+                                                        @elseif (old('rating', $service->rating) == 2)
+                                                            <option value=5>5</option>
+                                                            <option value=4>4</option>
+                                                            <option value=3>3</option>
+                                                            <option value=2 selected>2</option>
+                                                            <option value=1>1</option>
+                                                        @elseif (old('rating', $service->rating) == 1)
+                                                            <option value=5>5</option>
+                                                            <option value=4>4</option>
+                                                            <option value=3>3</option>
+                                                            <option value=2>2</option>
+                                                            <option value=1 selected>1</option>
+                                                        @endif
+                                                    </select>
                                                     @error('rating')
                                                     <div class="text-danger">
                                                         {{ $message }}
                                                     </div>
                                             @enderror
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="col-12 d-flex justify-content-end">
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">
                                                     Submit

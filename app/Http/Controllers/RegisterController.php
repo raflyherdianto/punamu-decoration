@@ -17,9 +17,9 @@ class RegisterController extends Controller
     {
         return view('auth.register', [
             'title' => 'Register',
-            'provinces' => Province::all(),
-            'regencies' => Regency::all(),
-            'districts' => District::all(),
+            'provinces' => Province::where('id', 35)->get(),
+            'regencies' => Regency::where('province_id', 35)->get(),
+            'districts' => Regency::join('districts', 'regencies.id', '=', 'districts.regency_id')->where('province_id', 35)->get(),
         ]);
     }
 

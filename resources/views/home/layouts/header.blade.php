@@ -21,10 +21,14 @@
             <li class="{{ Request::is('product') ? 'active' : '' }}"><a href="{{ url('product') }}">Our Services</a></li>
             <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}">Contact Us</a></li>
             @if (Auth::check())
-                <li><a href="{{ url('dashboard/cart') }}">Cart</a></li>
-                <li><a href="{{ url('dashboard/transaction') }}">Transactions</a></li>
+                @if (auth()->user()->role == 'customer')
+                    <li><a href="{{ url('dashboard/cart') }}">Cart</a></li>
+                    <li><a href="{{ url('dashboard/transaction') }}">Transactions</a></li>
+                @elseif (auth()->user()->role == 'admin')
+                    <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                @endif
                 @else
-                <li><a href="{{ url('login') }}">Login</a></li>
+                    <li><a href="{{ url('login') }}">Login</a></li>
             @endif
           </ul>
 

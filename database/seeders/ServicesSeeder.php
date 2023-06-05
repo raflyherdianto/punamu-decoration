@@ -17,7 +17,7 @@ class ServicesSeeder extends Seeder
             [
                 'name' => 'Wedding Decor 1',
                 'category_id' => 1,
-                'description' => 'Include: Lighting, Inisial Nama, Kursi, Karpet'.' Free: Welcome Sign, Sewa Hand Bouquet, Gapura Masuk, Pundi Amplop',
+                'description' => 'Include: Lighting, Inisial Nama, Kursi, Karpet. Free: Welcome Sign, Sewa Hand Bouquet, Gapura Masuk, Pundi Amplop',
                 'price' => 1000000,
                 'rating' => 4.5,
                 'created_at' => now(),
@@ -26,7 +26,7 @@ class ServicesSeeder extends Seeder
             [
                 'name' => 'Wedding Decor 2',
                 'category_id' => 1,
-                'description' => 'Include: Lighting, Inisial Nama, Kursi, Karpet'.' Free: Welcome Sign, Sewa Hand Bouquet, Gapura Masuk, Pundi Amplop',
+                'description' => 'Include: Lighting, Inisial Nama, Kursi, Karpet. Free: Welcome Sign, Sewa Hand Bouquet, Gapura Masuk, Pundi Amplop',
                 'price' => 1500000,
                 'rating' => 4,
                 'created_at' => now(),
@@ -35,7 +35,7 @@ class ServicesSeeder extends Seeder
             [
                 'name' => 'Wedding Decor 3',
                 'category_id' => 1,
-                'description' => 'Include: Lighting, Inisial Nama, Kursi, Karpet'.' Free: Welcome Sign, Sewa Hand Bouquet, Gapura Masuk, Pundi Amplop',
+                'description' => 'Include: Lighting, Inisial Nama, Kursi, Karpet. Free: Welcome Sign, Sewa Hand Bouquet, Gapura Masuk, Pundi Amplop',
                 'price' => 2000000,
                 'rating' => 4.7,
                 'created_at' => now(),

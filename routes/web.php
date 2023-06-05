@@ -7,10 +7,12 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DateController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartsController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\ImageServicesController;
@@ -25,6 +27,8 @@ use App\Http\Controllers\ImageServicesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/dashboard/payment', [PaymentController::class, 'index'])->middleware('auth');
 
 Route::get('/dashboard/date', [DateController::class, 'index'])->middleware('auth');
 

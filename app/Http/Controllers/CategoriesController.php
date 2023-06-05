@@ -15,6 +15,9 @@ class CategoriesController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.categories.index', [
             'title' => 'Categories',
             'categories' => Category::all(),
@@ -26,6 +29,9 @@ class CategoriesController extends Controller
      */
     public function create()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.categories.create', [
             'title' => 'Create Categories',
         ]);
@@ -59,6 +65,9 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.categories.edit', [
             'title' => 'Edit Category',
             'category' => Category::findOrFail($id),

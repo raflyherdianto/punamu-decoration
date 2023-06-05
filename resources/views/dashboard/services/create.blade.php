@@ -94,13 +94,21 @@
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="first-name-column">Rating</label>
-                                                    <input type="number" class="form-control @error('rating') is-invalid @enderror"
-                                                    id="rating" name="rating" placeholder="Rating layanan..." value="{{ old('rating') }}">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <select class="form-select @error('rating') is-invalid @enderror"
+                                                    id="rating" name="rating" value="{{ old('rating') }}">
+                                                        <option selected>Bintang...</option>
+                                                        <option value=5>5</option>
+                                                        <option value=4>4</option>
+                                                        <option value=3>3</option>
+                                                        <option value=2>2</option>
+                                                        <option value=1>1</option>
+                                                    </select>
                                                     @error('rating')
                                                     <div class="text-danger">
                                                         {{ $message }}
                                                     </div>
-                                            @enderror
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-12 d-flex justify-content-end">

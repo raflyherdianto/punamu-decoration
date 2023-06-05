@@ -16,6 +16,9 @@ class ServicesController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.services.index', [
             'title' => 'Services',
             'services' => Service::all(),
@@ -27,6 +30,9 @@ class ServicesController extends Controller
      */
     public function create()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.services.create', [
             'title' => 'Create Services',
             'categories' => Category::all(),
@@ -63,6 +69,9 @@ class ServicesController extends Controller
      */
     public function edit($id)
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.services.edit', [
             'title' => 'Edit Services',
             'service' => Service::findOrFail($id),
@@ -81,7 +90,6 @@ class ServicesController extends Controller
             'category_id' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|max:255',
-            'rating' => 'max:5',
         ]);
         Service::where('id', $services->id)->update($validateData);
         Alert::success('Success', 'Data berhasil diubah');

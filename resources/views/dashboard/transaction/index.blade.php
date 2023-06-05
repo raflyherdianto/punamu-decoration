@@ -24,17 +24,19 @@
 
         <section class="section">
             <div class="card">
-                <a href="{{ url('dashboard/transaction/create') }}">
+                {{-- <a href="{{ url('dashboard/transaction/create') }}">
                     <h5 class="col-12 col-md-2 btn btn-primary" style="margin: 15px 15px 0px 15px">Create Data</h5>
-                </a>
+                </a> --}}
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
                             <tr>
                                 <th>Kode</th>
+                                <th>Nama Pemesan</th>
                                 <th>Total Harga</th>
                                 <th>Tanggal Acara</th>
                                 <th>Waktu Acara</th>
+                                <th>Tanggal Transaksi</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -43,9 +45,11 @@
                             @foreach ($transactions as $transaction)
                             <tr>
                                 <td>{{ $transaction->code }}</td>
+                                <td>{{ $transaction->user->name }}</td>
                                 <td>Rp.{{ $transaction->total_price }}</td>
                                 <td>{{ $transaction->date_event }}</td>
                                 <td>{{ $transaction->time_event }}</td>
+                                <td>{{ $transaction->created_at }}</td>
                                 @if ($transaction->status == 'PENDING')
                                     <td>
                                         <span class="badge bg-warning text-dark">{{ $transaction->status }}</span>
@@ -64,6 +68,7 @@
                                     </td>
                                 @endif
                                 <td>
+                                    @can('admin')
                                     <form action="{{ url('dashboard/transaction/'.$transaction->id) }}" method="POST">
                                         @method('delete')
                                         @csrf
@@ -76,6 +81,14 @@
                                         <button>
                                             <a href="{{ url('dashboard/transaction/'.$transaction->id.'/edit') }}">
                                                 <box-icon name='edit'></box-icon>
+                                            </a>
+                                        </button>
+                                    </span>
+                                    @endcan
+                                    <span>
+                                        <button>
+                                            <a href="{{ url('dashboard/transaction/'.$transaction->id) }}">
+                                                <box-icon name='info-circle'></box-icon>
                                             </a>
                                         </button>
                                     </span>

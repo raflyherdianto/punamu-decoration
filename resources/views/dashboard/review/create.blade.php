@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 
-@section('content')
+@section('container')
     <div class="page-heading">
         <div class="page-title">
             <div class="row">
@@ -11,7 +11,7 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="index.html">Dashboard</a>
+                                <a href="{{ url('dashboard') }}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Create Review
@@ -20,50 +20,68 @@
                     </nav>
                 </div>
             </div>
-
             <section id="multiple-column-form">
                 <div class="row match-height">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-content">
                                 <div class="card-body">
-                                    <form class="form">
+                                    <form action="{{ url('dashboard/review') }}" method="POST" class="form">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <label for="first-name-column">Name User</label>
-                                                    <input type="text" id="first-name-column" class="form-control"
-                                                        placeholder="Name Services" name="fname-column" />
+                                                    <label for="first-name-column">Nama Layanan</label>
+                                                    <select
+                                                        class="choices form-select @error('service_id') is-invalid @enderror"
+                                                        id="service_id" name="service_id"
+                                                        value="{{ old('service_id') }}">
+                                                        <option selected>Layanan</option>
+                                                        @foreach ($services as $service)
+                                                            <option value="{{ $service->id }}">{{ $service->name }}
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                    @error('service_id')
+                                                        <div class="text-danger">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <label for="first-name-column">Name Services</label>
-                                                    <input type="text" id="first-name-column" class="form-control"
-                                                        placeholder="Name User" name="fname-column" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <label for="country-floating">Star</label>
-                                                    <input type="text" id="country-floating" class="form-control"
-                                                        name="Star" placeholder="Photo" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <label for="country-floating">Description</label>
-                                                    <input type="text" id="country-floating" class="form-control"
-                                                        name="Description" placeholder="Photo" />
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-12">
-                                                <div class="form-check">
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox5" class="form-check-input"
-                                                            checked />
-                                                        <label for="checkbox5">Remember Me</label>
+                                                    <label for="first-name-column">Deskripsi</label>
+                                                    <input type="text"
+                                                        class="form-control
+                                                        @error('description') is-invalid @enderror"
+                                                        id="description" name="description"
+                                                        placeholder="Deskripsi..." value="{{ old('description') }}">
+                                                        @error('description')
+                                                        <div class="text-danger">
+                                                            {{ $message }}
+                                                        </div>
+                                                @enderror
                                                     </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="first-name-column">Rating</label>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <select class="form-select @error('star') is-invalid @enderror"
+                                                    id="star" name="star" value="{{ old('star') }}">
+                                                        <option selected>Bintang...</option>
+                                                        <option value=5>5</option>
+                                                        <option value=4>4</option>
+                                                        <option value=3>3</option>
+                                                        <option value=2>2</option>
+                                                        <option value=1>1</option>
+                                                    </select>
+                                                    @error('star')
+                                                    <div class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-12 d-flex justify-content-end">

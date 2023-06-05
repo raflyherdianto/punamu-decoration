@@ -27,9 +27,12 @@
                 <a href="{{ url('dashboard/cart/create') }}">
                     <h5 class="col-12 col-md-2 btn btn-primary" style="margin: 15px 15px 0px 15px">Create Data</h5>
                 </a>
+                @if (count($carts) > 0)
                 <a href="{{ url('dashboard/date') }}">
                     <h5 class="col-12 col-md-2 btn btn-success" style="margin: 15px 15px 0px 15px">Lanjutkan Pembayaran</h5>
                 </a>
+                @endif
+
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>

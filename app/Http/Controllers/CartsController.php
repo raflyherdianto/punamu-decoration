@@ -28,6 +28,10 @@ class CartsController extends Controller
      */
     public function create()
     {
+        if(auth()->user()->verified == 0){
+            Alert::error('Error', 'Silahkan verifikasi profil terlebih dahulu');
+            return back();
+        };
         return view('dashboard.cart.create', [
             'title' => 'Create Cart',
             'services' => Service::all(),

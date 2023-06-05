@@ -17,6 +17,9 @@ class ImageServicesController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.image-services.index', [
             'title' => 'Image Services',
             'image_services' => ImageService::all(),
@@ -28,6 +31,9 @@ class ImageServicesController extends Controller
      */
     public function create()
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.image-services.create', [
             'title' => 'Create Image Services',
             'services' => Service::all(),
@@ -66,6 +72,9 @@ class ImageServicesController extends Controller
      */
     public function edit($id)
     {
+        if(auth()->user()->role == 'customer'){
+            abort(403);
+        };
         return view('dashboard.image-services.edit', [
             'title' => 'Edit Image Services',
             'image_service' => ImageService::find($id),
