@@ -45,7 +45,7 @@
                                 <td>{{ $service->name }}</td>
                                 <td>{{ $service->category->name }}</td>
                                 <td>{{ $service->description }}</td>
-                                <td>Rp.{{ $service->price }}</td>
+                                <td>Rp.{{ number_format($service->price, 0, ',', '.') }}</td>
                                 <td>{{ $service->rating }}</td>
                                 <td>
                                     <form action="{{ url('dashboard/service/'.$service->id) }}" method="POST">

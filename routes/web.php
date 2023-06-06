@@ -1,10 +1,9 @@
 <?php
 
-use App\Models\Service;
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DateController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartsController;
 use App\Http\Controllers\PaymentController;
@@ -12,6 +11,7 @@ use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TransactionsController;
@@ -50,11 +50,7 @@ Route::resource('/dashboard/category', CategoriesController::class)->middleware(
 
 Route::resource('/dashboard/service', ServicesController::class)->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index', [
-        'title' => 'Dashboard',
-    ]);
-})->middleware('auth');
+Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
 
 Route::post('/login',[AuthController::class,'authenticate']);
 
@@ -66,16 +62,22 @@ Route::post('/register',[RegisterController::class,'store']);
 
 Route::get('/register', [RegisterController::class,'index']);
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', [HomeController::class,'home']);
 
-Route::get('/contact', function () {
-    return view('home.contact');
-});
-Route::get('/product', function () {
-    return view('home.product');
-});
-Route::get('/about', function () {
-    return view('home.about');
-});
+Route::get('/contact', [HomeController::class,'contact']);
+
+Route::get('/service/details/{service}', [HomeController::class, 'detail']);
+
+Route::get('/services', [HomeController::class,'service']);
+
+Route::get('/about', [HomeController::class,'about']);
+
+// Route::get('/contact', function () {
+//     return view('home.contact');
+// });
+// Route::get('/product', function () {
+//     return view('home.product');
+// });
+// Route::get('/about', function () {
+//     return view('home.about');
+// });

@@ -46,7 +46,7 @@
                             <tr>
                                 <td>{{ $transaction->code }}</td>
                                 <td>{{ $transaction->user->name }}</td>
-                                <td>Rp.{{ $transaction->total_price }}</td>
+                                <td>Rp.{{ number_format($transaction->total_price, 0, ',', '.') }}</td>
                                 <td>{{ $transaction->date_event }}</td>
                                 <td>{{ $transaction->time_event }}</td>
                                 <td>{{ $transaction->created_at }}</td>

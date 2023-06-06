@@ -11,14 +11,12 @@
     <div class="container">
       <div class="menu-bg-wrap">
         <div class="site-navigation">
-          <a href="{{ url('/') }}" class="logo m-0 float-start">PunamuDecoration</a>
+          <a href="{{ url('/') }}" class="logo m-0 float-start">Punamu Decoration</a>
 
-          <ul
-            class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
-          >
+          <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
             <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
             <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ url('about') }}">About</a></li>
-            <li class="{{ Request::is('product') ? 'active' : '' }}"><a href="{{ url('product') }}">Our Services</a></li>
+            <li class="{{ Request::is('services') ? 'active' : '' }}"><a href="{{ url('services') }}">Our Services</a></li>
             <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}">Contact Us</a></li>
             @if (Auth::check())
                 @if (auth()->user()->role == 'customer')

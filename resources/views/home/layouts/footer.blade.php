@@ -6,12 +6,12 @@
             <h3>Contact</h3>
             <address>Jln Tlogo Indah 66A Tlogomas Kec. Lowokwaru, Malang</address>
             <ul class="list-unstyled links">
-              <li><a href="#">088803212754</a></li>
+              <li><a href="https://api.whatsapp.com/send?phone=628803212754">088803212754</a></li>
               <li>
-                <a href="#">punamudecoration.id@gmail.com</a>
+                <a href="mailto:punamudecoration.id@gmail.com">punamudecoration.id@gmail.com</a>
               </li>
               <li>
-                <a href="#">atreyamakeup@gmail.com</a>
+                <a href="mailto:atreyamakeup@gmail.com">atreyamakeup@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -20,22 +20,10 @@
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <div class="widget">
-            <h3>Sources</h3>
+            {{-- <h3>Sources</h3> --}}
             <ul class="list-unstyled float-start links">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Vision</a></li>
-              <li><a href="#">Mission</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-            <ul class="list-unstyled float-start links">
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Creative</a></li>
+              {{-- <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li> --}}
             </ul>
           </div>
           <!-- /.widget -->
@@ -45,18 +33,14 @@
           <div class="widget">
             <h3>Links</h3>
             <ul class="list-unstyled links">
-              <li><a href="#">Decoration</a></li>
-              <li><a href="#">Makeup</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact us</a></li>
+              <li><a href="{{ url('services') }}">Services</a></li>
+              <li><a href="{{ url('about') }}">About us</a></li>
+              <li><a href="{{ url('contact') }}">Contact us</a></li>
             </ul>
 
             <ul class="list-unstyled social">
               <li>
-                <a href="#"><span class="icon-instagram"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="icon-twitter"></span></a>
+                <a href="https://instagram.com/punamudecoration.id?igshid=MzRlODBiNWFlZA=="><span class="icon-instagram"></span></a>
               </li>
             </ul>
           </div>
@@ -68,20 +52,12 @@
 
       <div class="row mt-5">
         <div class="col-12 text-center">
-          <!--
-            **==========
-            NOTE:
-            Please don't remove this copyright link unless you buy the license here https://untree.co/license/
-            **==========
-          -->
-
           <p>
             Copyright &copy;
             <script>
               document.write(new Date().getFullYear());
             </script>
             . All Rights Reserved. &mdash; Punamu Decoration
-            <!-- License information: https://untree.co/license/ -->
           </p>
         </div>
       </div>
@@ -98,9 +74,9 @@
     </div>
   </div>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/tiny-slider.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/counter.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('/js/tiny-slider.js') }}"></script>
+  <script src="{{ asset('/js/aos.js') }}"></script>
+  <script src="{{ asset('/js/navbar.js') }}"></script>
+  <script src="{{ asset('/js/counter.js') }}"></script>
+  <script src="{{ asset('/js/custom.js') }}"></script>

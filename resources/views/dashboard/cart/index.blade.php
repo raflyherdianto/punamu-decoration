@@ -48,7 +48,7 @@
                             <tr>
                                 <td>{{ $cart->service->name }}</td>
                                 <td>{{ $cart->quantity }}</td>
-                                <td>Rp.{{ $cart->total_price }}</td>
+                                <td>Rp.{{ number_format($cart->total_price, 0, ',', '.') }}</td>
                                 <td>
                                     <form action="{{ url('dashboard/cart/'.$cart->id) }}" method="POST">
                                         @method('delete')

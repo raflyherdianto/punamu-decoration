@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
+use function PHPUnit\Framework\isEmpty;
+
 class CustomerController extends Controller
 {
     /**
@@ -73,10 +75,10 @@ class CustomerController extends Controller
         $user = User::where('username', $request->username)->first();
         $user -> role = 'customer';
         $user -> update();
-        if($user->bank_name && $user->bank_account != null){
+        if($user->bank_name && $user->bank_account != isEmpty()){
             $user->verified = 1;
             $user->update();
-        }
+        };
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect('/dashboard/customer');
 

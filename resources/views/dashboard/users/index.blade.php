@@ -59,16 +59,34 @@
                                 <td>{{ $customer->phone }}</td>
                                 <td>{{ $customer->bank_name }}</td>
                                 <td>{{ $customer->bank_account }}</td>
-                                <td>
-                                    <a href="{{ asset('storage/' . $customer->photo) }}" data-toggle="lightbox">
-                                        <img width="50" src="{{ asset('storage/' . $customer->photo) }}">
-                                    </a>
+                                @if ($customer->photo == null)
+                                    @if ($customer->gender == 'L')
+                                    <td>
+                                        <a href="{{ asset('/compiled/jpg/2.jpg') }}" data-toggle="lightbox">
+                                            <img width="50" src="{{ asset('/compiled/jpg/2.jpg') }}">
+                                        </a>
+                                    </td>
+                                    @else
+                                    <td>
+                                        <a href="{{ asset('/compiled/jpg/3.jpg') }}" data-toggle="lightbox">
+                                            <img width="50" src="{{ asset('/compiled/jpg/3.jpg') }}">
+                                        </a>
+                                    </td>
+                                    @endif
+                                @else
+                                    <td>
+                                        <a href="{{ asset('storage/' . $customer->photo) }}" data-toggle="lightbox">
+                                            <img width="50" src="{{ asset('storage/' . $customer->photo) }}">
+                                        </a>
+                                    </td>
+                                @endif
                                 <td>
                                     @if ($customer->verified == 1)
                                         <span class="badge bg-success">Verified</span>
                                     @else
                                         <span class="badge bg-danger">Not Verified</span>
                                     @endif
+                                </td>
                                 <td>
                                     <form action="{{ url('dashboard/customer/'.$customer->id) }}" method="POST">
                                         @method('delete')

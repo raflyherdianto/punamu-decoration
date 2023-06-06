@@ -45,7 +45,7 @@ class RegisterController extends Controller
         $user = User::where('username', $validatedData['username'])->first();
         $user -> role = 'customer';
         $user -> update();
-            Alert::success('Registrasi berhasil!', 'Silahkan login.');
-            return redirect('/login');
+        Alert::success('Registrasi berhasil!', 'Silahkan login.');
+        return redirect('/login');
     }
 }

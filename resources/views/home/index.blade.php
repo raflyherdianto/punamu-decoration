@@ -12,13 +12,11 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-9 text-center">
                     <h1 class="heading" data-aos="fade-up">
+
+                    </h1>
+                    <h1 class="heading" data-aos="fade-up">
                         Organizer of backdrop decorations for the best events in the city of Malang
                     </h1>
-                    <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <input type="text" class="form-control px-4" placeholder="Cari.." />
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -34,7 +32,7 @@
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <p>
-                        <a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">View all
+                        <a href="{{ url('services') }}" class="btn btn-primary text-white py-3 px-4">View all
                             decoration</a>
                     </p>
                 </div>
@@ -43,215 +41,30 @@
                 <div class="col-12">
                     <div class="property-slider-wrap">
                         <div class="property-slider">
+                            @foreach ($services as $service)
                             <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (1).jpeg" alt="Image" class="img-fluid" />
+                                <a href="{{ asset('storage/' . $service->image) }}" class="img" data-toggle="lightbox">
+                                    <img src="{{ asset('storage/' . $service->image) }}" alt="Image" class="img-fluid" />
                                 </a>
 
                                 <div class="property-content">
                                     <div class="rating">
                                         <div class="price">
-                                            <span>Rp. 1.100.000</span>
+                                            <span>Rp.{{ number_format($service->price, 0, ',', '.') }}</span>
                                         </div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.5</h6>
+                                        <h6><img src="{{ asset('images/Icon/star.png') }}" style="width: 16px" alt=""> Rating : {{ $service->rating }}</h6>
                                     </div>
-                                    <p class="review">81 Reviews</p>
+                                    <p class="review"></p>
                                     <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand
-                                            Bouquet</span>
-                                        <span class="city d-block mb-2">Decor 3</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
+                                        <span class="d-block mb-2 text-black-50">{{ $service->description }}</span>
+                                        <span class="city d-block mb-2">{{ $service->name }}</span>
+                                        <a href="{{ url('https://api.whatsapp.com/send?phone=628803212754&text=Halo%20min,%20mau%20tanya%20'.$service->name) }}" class="btn btn-primary py-2 px-3">Contact us</a>
+                                        <a href="{{ url('service/details/'.$service->id) }}" class="btn btn-primary py-2 px-3">Details</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (11).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 1.300.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.7</h6>
-                                    </div>
-                                    <p class="review">74 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand
-                                            Bouquet</span>
-                                        <span class="city d-block mb-2">Decor 4</span>
-
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (3).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 1.000.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.6</h6>
-                                    </div>
-                                    <p class="review">92 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand
-                                            Bouquet</span>
-                                        <span class="city d-block mb-2">Decor 2</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (4).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 1.800.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
-                                    </div>
-                                    <p class="review">46 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet,
-                                            Gapura Masuk, Pundi Amplop</span>
-                                        <span class="city d-block mb-2">Decor 5</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (5).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 2.300.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
-                                    </div>
-                                    <p class="review">29 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet,
-                                            Gapura Masuk, Pundi Amplop</span>
-                                        <span class="city d-block mb-2">Decor 6</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (14).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 2.200.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
-                                    </div>
-                                    <p class="review">53 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet,
-                                            Gapura Masuk, Pundi Amplop</span>
-                                        <span class="city d-block mb-2">Decor 8</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (7).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 2.350.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
-                                    </div>
-                                    <p class="review">78 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet,
-                                            Gapura Masuk, Pundi Amplop</span>
-                                        <span class="city d-block mb-2">Decor 9</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (21).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 2.100.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.8</h6>
-                                    </div>
-                                    <p class="review">46 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet,
-                                            Gapura Masuk, Pundi Amplop</span>
-                                        <span class="city d-block mb-2">Decor 10</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-
-                            <div class="property-item">
-                                <a href="property-single.html" class="img">
-                                    <img src="images/Decor/decor (9).jpeg" alt="Image" class="img-fluid" />
-                                </a>
-
-                                <div class="property-content">
-                                    <div class="rating">
-                                        <div class="price"><span>Rp. 2.500.000</span></div>
-                                        <h6><img src="images/Icon/star.png" style="width: 16px" alt=""> Rating : 4.9</h6>
-                                    </div>
-                                    <p class="review">68 Reviews</p>
-                                    <div>
-                                        <span class="d-block mb-2 text-black-50">Include: Lighting, Inisial Nama, Kursi,
-                                            Karpet</span>
-                                        <span class="d-block mb-2 text-black-50">Free: Welcome Sign, Sewa Hand Bouquet,
-                                            Gapura Masuk, Pundi Amplop</span>
-                                        <span class="city d-block mb-2">Decor 7</span>
-                                        <a href="property-single.html" class="btn btn-primary py-2 px-3">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
+                            @endforeach
                         </div>
 
                         <div id="property-nav" class="controls" tabindex="0" aria-label="Carousel Navigation">
@@ -279,7 +92,6 @@
                             Dapat melayani segala dekorasi yang dipersiapkan untuk merayakan rumah baru seperti pesta rumah,
                             undang tamu, syukuran, dan lainya.
                         </p>
-                        <p><a href="#" class="learn-more">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
@@ -290,7 +102,6 @@
                             Dapat melayani segala yang dipersiapkan untuk merayakan hari pernikahan seperti busana,
                             dekorasi, makeup dan fotografi.
                         </p>
-                        <p><a href="#" class="learn-more">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
@@ -301,7 +112,6 @@
                             Dapat melayani segala yang dipersiapkan untuk merayakan hari pertunangan seperti makeup, busana
                             dan fotografi.
                         </p>
-                        <p><a href="#" class="learn-more">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
@@ -312,7 +122,6 @@
                             Dapat melayani segala dekorasi yang dipersiapkan untuk merayakan hari ulang tahun dan acara
                             sejenisnya.
                         </p>
-                        <p><a href="#" class="learn-more">Learn More</a></p>
                     </div>
                 </div>
             </div>

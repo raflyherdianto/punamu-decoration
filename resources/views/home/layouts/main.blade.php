@@ -16,16 +16,16 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="{{ asset('/fonts/icomoon/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/fonts/flaticon/font/flaticon.css') }}" />
 
-    <link rel="stylesheet" href="css/tiny-slider.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="{{ asset('/css/tiny-slider.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('/css/aos.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/styles.css') }}" />
 
     <title>
-      Decoration Organizer
+      {{ $title }}
     </title>
   </head>
   <body>
@@ -40,5 +40,6 @@
 
      @include('home.layouts.footer')
 
+     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
   </body>
 </html>

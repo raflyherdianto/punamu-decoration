@@ -31,7 +31,7 @@
               alt="Payment"
             />
             <h1 class="error-title">Lakukan pembayaran</h1>
-            <h1 style="font-size: 30px" class="error-title">Rp.{{ $transaction->total_price }}</h1>
+            <h1 style="font-size: 30px" class="error-title">Rp.{{ number_format($transaction->total_price, 0, ',', '.') }}</h1>
             <p class="fs-5 text-gray-600">
               Transfer ke bank {{ $payment->bank_name }} {{ $payment->bank_account }}.
             </p>
