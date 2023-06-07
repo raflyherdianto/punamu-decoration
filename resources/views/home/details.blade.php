@@ -23,9 +23,13 @@
     <div class="section">
         <div class="container">
             <div class="property-item">
-                <a href="{{ asset('storage/' . $details->image) }}" class="img" data-toggle="lightbox">
-                    <img src="{{ asset('storage/' . $details->image) }}" alt="Image" class="img-fluid" height="500px" />
-                </a>
+                <h3 class="city d-block title-detail py-2 px-3" style="text-align: center">{{ $details->name }}</h3>
+                <div class="img-detail" style="text-align: center">
+                    <a href="{{ asset('storage/' . $details->image) }}" class="img">
+                        <img src="{{ asset('storage/' . $details->image) }}" alt="Image" class="img-fluid" width="800px"
+                            height="600px" />
+                    </a>
+                </div>
 
                 <div class="property-content">
                     <div class="rating">
@@ -36,7 +40,6 @@
                     <p class="review"></p>
                     <div>
                         <span class="d-block mb-2 text-black-50">{{ $details->description }}</span>
-                        <span class="city d-block mb-2">{{ $details->name }}</span>
                         <a href="{{ url('https://api.whatsapp.com/send?phone=628803212754&text=Halo%20min,%20mau%20tanya%20' . $details->name) }}"
                             class="btn btn-primary py-2 px-3">Contact us</a>
                     </div>
@@ -48,16 +51,16 @@
 
     <div class="section section-properties">
         <div class="container">
-            <div class="row mb-5 align-items-center">
+            <div class="row mb-2 align-items-center">
                 <div class="col-lg-6 text-center mx-auto">
-                    <h2 class="font-weight-bold text-primary heading">
+                    <h2 class="title-detail py-2 px-3">
                         Reviews
                     </h2>
                 </div>
             </div>
             <div class="row">
                 @empty($reviews)
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                         <div class="property-item mb-30">
                             <div class="property-content">
                                 <div>
@@ -68,31 +71,31 @@
                     </div>
                 @endempty
                 @foreach ($reviews as $review)
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                         <div class="property-item mb-30">
-                            @if ($review->photo == null)
-                                @if ($review->gender == 'L')
-                                    <a href="{{ asset('/compiled/jpg/2.jpg') }}" data-toggle="lightbox">
-                                        <img width="80" src="{{ asset('/compiled/jpg/2.jpg') }}">
-                                    </a>
-                                @else
-                                    <a href="{{ asset('/compiled/jpg/3.jpg') }}" data-toggle="lightbox">
-                                        <img width="80" src="{{ asset('/compiled/jpg/3.jpg') }}">
-                                @endif
-                            @else
-                                <a href="{{ asset('storage/' . $review->photo) }}" class="img" data-toggle="lightbox">
-                                    <img src="{{ asset('storage/' . $review->photo) }}" alt="Image" class="img-fluid" />
-                                </a>
-                            @endif
-
-                            <div class="property-content">
-                                <div class="rating">
-                                    <div class="price"><span></span></div>
+                            <div class="img-reviews property-content shadow p-3 mb-5 bg-body-tertiary rounded"">
+                                <div class="reviews">
+                                    @if ($review->photo == null)
+                                        @if ($review->gender == 'L')
+                                            <a href="{{ asset('/compiled/jpg/2.jpg') }}" data-toggle="lightbox">
+                                                <img width="80" src="{{ asset('/compiled/jpg/2.jpg') }}">
+                                            </a>
+                                        @else
+                                            <a href="{{ asset('/compiled/jpg/3.jpg') }}" data-toggle="lightbox">
+                                                <img width="80" src="{{ asset('/compiled/jpg/3.jpg') }}">
+                                        @endif
+                                    @else
+                                        <a href="{{ asset('storage/' . $review->photo) }}" class="img"
+                                            data-toggle="lightbox">
+                                            <img src="{{ asset('storage/' . $review->photo) }}" alt="Image"
+                                                class="img-fluid" />
+                                        </a>
+                                    @endif
                                     <h6><img src="{{ asset('images/Icon/star.png') }}" style="width: 16px" alt="">
                                         Rating : {{ $review->star }}</h6>
                                 </div>
                                 <div>
-                                    <span class="city d-block mb-2">{{ $review->name }}</span>
+                                    <span class="city d-block mt-1">{{ $review->name }}</span>
                                 </div>
                                 <p class="review"></p>
                                 <div>

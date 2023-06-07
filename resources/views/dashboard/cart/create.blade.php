@@ -53,7 +53,7 @@
                                                 <div class="form-group">
                                                     <label for="first-name-column">Jumlah</label>
                                                     <input type="number" class="form-control @error('quantity') is-invalid @enderror"
-                                                        id="quantity" name="quantity" placeholder="Jumalah pesanan..." value="{{ old('quantity') }}">
+                                                        id="quantity" name="quantity" placeholder="Jumlah pesanan..." value="{{ old('quantity') }}">
                                                         @error('quantity')
                                                         <div class="text-danger">
                                                             {{ $message }}
