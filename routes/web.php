@@ -66,7 +66,7 @@ Route::get('/', [HomeController::class,'home']);
 
 Route::get('/contact', [HomeController::class,'contact']);
 
-Route::get('/service/details/{service}', [HomeController::class, 'detail']);
+Route::get('/service/details/{id}', [HomeController::class, 'detail']);
 
 Route::get('/services', [HomeController::class,'service']);
 

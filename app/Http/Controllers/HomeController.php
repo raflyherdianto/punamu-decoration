@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function home(){
-        $services = Service::join('image_services', 'services.id', '=', 'image_services.service_id')
+        $services = ImageService::join('services', 'image_services.service_id', '=', 'services.id')
             ->where('category_id', '=', '1')
             ->get();
 
@@ -47,12 +47,12 @@ class HomeController extends Controller
         ]);
     }
 
-    public function detail(Service $service){
+    public function detail($id){
         $details = ImageService::join('services', 'image_services.service_id', '=', 'services.id')
-            ->where('service_id', '=', $service->id)
+            ->where('service_id', '=', $id)
             ->first();
         $reviews = User::join('reviews', 'users.id', '=', 'reviews.user_id')
-            ->where('service_id', '=', $service->id)
+            ->where('service_id', '=', $id)
             ->get();
         return view('home.details', [
             'title' => 'Punamu Decoration',
