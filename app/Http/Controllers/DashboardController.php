@@ -23,6 +23,7 @@ class DashboardController extends Controller
                 'transaction' => Transaction::count(),
                 'category' => Category::count(),
                 'image' => ImageService::count(),
+                'income' => Transaction::where('status', 'SUCCESS')->sum('total_price'),
             ]);
         } elseif (auth()->user()->role == 'customer'){
             return view('dashboard.index', [
